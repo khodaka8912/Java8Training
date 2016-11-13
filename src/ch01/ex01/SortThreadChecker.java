@@ -3,16 +3,14 @@ package ch01.ex01;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class SortThreadChecker {
+public final class SortThreadChecker {
 
     private String[] target = {"aaaa", "aaa", "abcde", "123456", "x", "00"};
 
     void check() {
         Comparator<String> checker = (s1, s2) -> {
             System.out.println("Called thread: " + currentThreadInfo());
-            return s1.length() == s2.length() ? 0 :
-                    s1.length() > s2.length() ? 1 :
-                            -1;
+            return Integer.compare(s1.length(), s2.length());
         };
         System.out.println("Sort Start");
         System.out.println("Caller thread: " + currentThreadInfo());
