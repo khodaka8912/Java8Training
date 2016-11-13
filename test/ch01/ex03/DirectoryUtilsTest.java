@@ -11,7 +11,7 @@ import static org.junit.Assert.fail;
 /**
  * @author hodaka
  */
-public class DirectoriesTest {
+public class DirectoryUtilsTest {
 
     @Before
     public void setUp() throws Exception {
@@ -20,22 +20,22 @@ public class DirectoriesTest {
 
     @Test(expected = NullPointerException.class)
     public void testListFilesByExtensionNull() {
-        Directories.listFilesByExtension(null, "");
+        DirectoryUtils.listFilesByExtension(null, "");
     }
 
     @Test(expected = NullPointerException.class)
     public void testListFilesByExtensionNull2() {
-        Directories.listFilesByExtension("", null);
+        DirectoryUtils.listFilesByExtension("", null);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testListFilesByExtensionNonDir() {
-        Directories.listFilesByExtension("F:\\", "");
+        DirectoryUtils.listFilesByExtension("F:\\", "");
     }
 
     @Test
     public void testListFilesByExtension() {
-        List<File> files = Directories.listFilesByExtension(".", "java");
+        List<File> files = DirectoryUtils.listFilesByExtension(".", "java");
         files.forEach(f -> {
             if (!f.getName().endsWith(".java")) {
                 fail();

@@ -6,24 +6,24 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import static ch01.ex02.Directories.listSubDirectoriesMethodRef;
+import static ch01.ex02.DirectoryUtils.listSubDirectoriesMethodRef;
 import static org.junit.Assert.fail;
 
-public class DirectoriesTest {
+public class DirectoryUtilsTest {
 
     @Test(expected = NullPointerException.class)
     public void testDirectorySearcherLambdaNull() {
-        Directories.listSubDirectoriesLambda(null);
+        DirectoryUtils.listSubDirectoriesLambda(null);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testDirectorySearcherLambdaNonDirectory() throws IOException {
-        Directories.listSubDirectoriesLambda("F:\\");
+        DirectoryUtils.listSubDirectoriesLambda("F:\\");
     }
 
     @Test
     public void testDirectorySearcherLambda() throws IOException {
-        List<File> files = Directories.listSubDirectoriesMethodRef(".");
+        List<File> files = DirectoryUtils.listSubDirectoriesMethodRef(".");
         files.forEach(f -> {
             if (!f.isDirectory()) {
                 fail();
@@ -43,7 +43,7 @@ public class DirectoriesTest {
 
     @Test
     public void testDirectorySearcherMethodReference() throws IOException {
-        List<File> files = Directories.listSubDirectoriesMethodRef(".");
+        List<File> files = DirectoryUtils.listSubDirectoriesMethodRef(".");
         files.forEach(f -> {
             if (!f.isDirectory()) {
                 fail();

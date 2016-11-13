@@ -5,9 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-public class Directories {
+public class DirectoryUtils {
 
-    private Directories() {
+    private DirectoryUtils() {
     }
 
     /**
@@ -48,8 +48,8 @@ public class Directories {
     }
 
     public static void main(String[] args) {
-        listSubDirectoriesLambda("C:\\Program Files").forEach(System.out::println);
-        listSubDirectoriesMethodRef("C:\\Program Files\\Java\\jdk1.8.0_65\\LICENSE").forEach(System.out::println);
+        listSubDirectoriesLambda("C:\\Program FileUtils").forEach(System.out::println);
+        listSubDirectoriesMethodRef("C:\\Program FileUtils\\Java\\jdk1.8.0_65\\LICENSE").forEach(System.out::println);
     }
 
 }
