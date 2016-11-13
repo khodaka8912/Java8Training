@@ -1,7 +1,7 @@
 package ch01.ex05;
 
 /**
- * 8 Lines shorter than Original with "new Runnable"
+ * 8 Lines shorter than the original codes with "new Runnable"
  */
 public class Friendly {
 
