@@ -19,9 +19,10 @@ public class DirectoryUtils {
      * @throws NullPointerException     if directoryPath or extension is null.
      * @throws IllegalArgumentException if directoryPath is not a directory.
      */
-    public static List<File> listFilesByExtension(String directoryPath, String extension) {
+    public static List<String> listFilesByExtension(String directoryPath, String extension) {
         File dir = check(directoryPath, extension);
-        File[] files = dir.listFiles((f, s) -> s.endsWith("." + extension));
+        /* The parameter "extension" is captured in lambda.  */
+        String[] files = dir.list((f, s) -> s.endsWith("." + extension));
         return Arrays.asList(files);
     }
 
@@ -36,7 +37,7 @@ public class DirectoryUtils {
     }
 
     public static void main(String[] args) {
-        List<File> files = listFilesByExtension("src\\ch01\\ex03", "java");
+        List<String> files = listFilesByExtension("src\\ch01\\ex03", "java");
         files.forEach(System.out::println);
     }
 }

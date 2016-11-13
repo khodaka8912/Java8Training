@@ -3,7 +3,6 @@ package ch01.ex03;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.File;
 import java.util.List;
 
 import static org.junit.Assert.fail;
@@ -35,9 +34,9 @@ public class DirectoryUtilsTest {
 
     @Test
     public void testListFilesByExtension() {
-        List<File> files = DirectoryUtils.listFilesByExtension(".", "java");
-        files.forEach(f -> {
-            if (!f.getName().endsWith(".java")) {
+        List<String> list = DirectoryUtils.listFilesByExtension(".", "java");
+        list.forEach(s -> {
+            if (s.endsWith(".java")) {
                 fail();
             }
         });
