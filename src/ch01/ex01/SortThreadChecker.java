@@ -3,6 +3,10 @@ package ch01.ex01;
 import java.util.Arrays;
 import java.util.Comparator;
 
+/**
+ * {@link Arrays#sort(Object[], Comparator)}でコンパレータが実行されるスレッドを調べるクラス。
+ * コンパレータは、そｒｔを呼び出したスレッドで実行される。
+ */
 public final class SortThreadChecker {
 
     private String[] target = {"aaaa", "aaa", "abcde", "123456", "x", "00"};
