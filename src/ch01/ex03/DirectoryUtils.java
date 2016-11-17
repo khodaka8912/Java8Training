@@ -37,7 +37,7 @@ public class DirectoryUtils {
     }
 
     public static void main(String[] args) {
-        List<String> files = listFilesByExtension("src\\ch01\\ex03", "java");
+        List<String> files = listFilesByExtension(".", "txt");
         files.forEach(System.out::println);
     }
 }

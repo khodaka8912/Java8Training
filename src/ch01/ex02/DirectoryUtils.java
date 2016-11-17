@@ -48,8 +48,8 @@ public class DirectoryUtils {
     }
 
     public static void main(String[] args) {
-        listSubDirectoriesLambda("C:\\Program FileUtils").forEach(System.out::println);
-        listSubDirectoriesMethodRef("C:\\Program FileUtils\\Java\\jdk1.8.0_65\\LICENSE").forEach(System.out::println);
+        listSubDirectoriesLambda("src").forEach(System.out::println);
+        listSubDirectoriesMethodRef("test").forEach(System.out::println);
     }
 
 }
