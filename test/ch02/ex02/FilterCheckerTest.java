@@ -17,7 +17,7 @@ public class FilterCheckerTest {
     public void testFindLongWords() throws Exception {
         List<String> words = Arrays.asList(
                 new String(
-                        Files.readAllBytes(Paths.get("src\\ch02\\ex01\\ParallelForLoop.java"))
+                        Files.readAllBytes(Paths.get("alice.txt"))
                 ).split("[\\P{L}]+")
         );
 
