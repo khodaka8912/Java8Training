@@ -7,7 +7,7 @@ import java.util.Collection;
  */
 public abstract class OldCollection<E> implements Collection<E> {
 
-    public void stream() {
-        System.out.println("cannot compile");
-    }
+//    public void stream() {
+//        System.out.println("cannot compile");
+//    }
 }
