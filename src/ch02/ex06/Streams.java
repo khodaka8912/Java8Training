@@ -12,7 +12,7 @@ public class Streams {
     }
 
     static Stream<Character> characterStream(String string) {
-        return IntStream.range(0, string.length()).mapToObj(i -> string.charAt(i));
+        return IntStream.range(0, string.length()).mapToObj(string::charAt);
     }
 
     public static void main(String[] args) {

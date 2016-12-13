@@ -19,8 +19,6 @@ public class ContinuousRunnerTest {
 
         assertEquals(2, list.size());
         assertEquals("first", list.get(0));
-        assertEquals("first", list.get(0));
+        assertEquals("second", list.get(1));
     }
-
-
 }

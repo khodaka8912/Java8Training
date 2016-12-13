@@ -19,7 +19,7 @@ public class FilterChecker {
         AtomicInteger count = new AtomicInteger();
         return words.stream().filter(s -> {
             if (s.length() > LENGTH) {
-                System.out.println("find long word.S count = " + count.incrementAndGet());
+                System.out.println("find long word. count = " + count.incrementAndGet());
             } else {
                 System.out.println("not long.");
             }
