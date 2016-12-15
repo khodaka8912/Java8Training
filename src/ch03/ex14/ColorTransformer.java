@@ -1,4 +1,4 @@
-package ch03.ex13;
+package ch03.ex14;
 
 import javafx.scene.image.PixelReader;
 import javafx.scene.paint.Color;
