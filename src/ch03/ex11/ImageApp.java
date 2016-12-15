@@ -1,6 +1,7 @@
 package ch03.ex11;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
@@ -30,6 +31,6 @@ public class ImageApp extends Application {
         ColorTransformer combined = ColorTransformer.andThen(brighter, framer);
         Image out = Images.transform(in, combined);
         ImageIO.write(SwingFXUtils.fromFXImage(out, null), "PNG", new File("ex11_len_brighten_framed.png"));
-        System.exit(0);
+        Platform.exit();
     }
 }
