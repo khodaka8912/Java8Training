@@ -17,6 +17,7 @@ public class StringComparators {
      * @return 自然な順序で比較するコンパレータ
      */
     public static Comparator<String> natural() {
+        // return Comparator.naturalOrder();
         return (s1, s2) -> s1.compareTo(s2);
     }
 
