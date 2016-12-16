@@ -19,7 +19,7 @@ public class ImageApp extends Application {
         Image in = new Image(new File("len_std.jpg").toURI().toString());
         int frameThick = 10;
         Color frameColor = Color.GRAY;
-        ColorTransformer brighter = ColorTransformer.toColorTransformer(c -> c.brighter());
+        ColorTransformer brighter = ColorTransformer.toColorTransformer(Color::brighter);
         ColorTransformer framer = (x, y, color) -> {
             int height = (int) in.getHeight();
             int width = (int) in.getWidth();

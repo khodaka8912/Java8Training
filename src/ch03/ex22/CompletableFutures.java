@@ -9,8 +9,6 @@ import java.util.function.Function;
 public class CompletableFutures {
 
     static <T, U> CompletableFuture<U> flatMap(CompletableFuture<T> future, Function<T, CompletableFuture<U>> mapper) {
-        return new CompletableFuture<U>() {
-
-        };
+        return future.thenCompose(mapper);
     }
 }
