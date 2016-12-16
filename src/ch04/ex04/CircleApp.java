@@ -1,7 +1,6 @@
 package ch04.ex04;
 
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -20,7 +19,6 @@ public class CircleApp extends Application {
         circle.centerYProperty().bind(Bindings.divide(scene.heightProperty(), 2));
         circle.radiusProperty().bind(Bindings.min(scene.widthProperty(), scene.heightProperty()).divide(2));
         primaryStage.setScene(scene);
-        primaryStage.setOnCloseRequest(event -> Platform.exit());
         primaryStage.show();
     }
 }

@@ -1,7 +1,6 @@
 package ch04.ex10;
 
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -39,7 +38,6 @@ public class WebViewer extends Application {
         pane.setTop(box);
         pane.setCenter(webView);
         primaryStage.setScene(new Scene(pane));
-        primaryStage.setOnCloseRequest(event -> Platform.exit());
         engine.load(navigationBar.getText());
         primaryStage.show();
     }

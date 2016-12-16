@@ -1,7 +1,6 @@
 package ch04.ex07;
 
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.*;
@@ -24,7 +23,6 @@ public class BorderApp extends Application {
         pane.setBorder(new Border(new BorderStroke(Paint.valueOf("blue"), BorderStrokeStyle.DOTTED, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
 
         primaryStage.setScene(new Scene(pane));
-        primaryStage.setOnCloseRequest(event -> Platform.exit());
         primaryStage.show();
     }
 }

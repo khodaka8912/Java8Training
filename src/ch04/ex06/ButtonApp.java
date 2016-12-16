@@ -1,7 +1,6 @@
 package ch04.ex06;
 
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -23,7 +22,6 @@ public class ButtonApp extends Application {
         BorderPane.setAlignment(pane.getTop(), Pos.CENTER);
         BorderPane.setAlignment(pane.getBottom(), Pos.CENTER);
         primaryStage.setScene(new Scene(pane));
-        primaryStage.setOnCloseRequest(event -> Platform.exit());
         primaryStage.show();
     }
 }

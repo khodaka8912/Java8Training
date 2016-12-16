@@ -1,7 +1,6 @@
 package ch04.ex01;
 
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -24,7 +23,6 @@ public class HelloWorld extends Application {
         pane.setCenter(message);
         primaryStage.setScene(new Scene(pane));
         primaryStage.setTitle("Hello");
-        primaryStage.setOnCloseRequest(event -> Platform.exit());
         primaryStage.show();
     }
 }

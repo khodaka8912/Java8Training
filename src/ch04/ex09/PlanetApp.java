@@ -4,7 +4,6 @@ import javafx.animation.Animation;
 import javafx.animation.Interpolator;
 import javafx.animation.PathTransition;
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
@@ -30,7 +29,6 @@ public class PlanetApp extends Application {
         primaryStage.setHeight(200);
         primaryStage.setWidth(280);
         primaryStage.setTitle("Planet");
-        primaryStage.setOnCloseRequest(event -> Platform.exit());
         primaryStage.show();
         ellipseTransition.play();
     }
